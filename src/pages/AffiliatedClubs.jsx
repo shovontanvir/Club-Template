@@ -25,7 +25,7 @@ const AffiliatedClubs = () => {
           International
         </h1>
         <div className="flex flex-wrap items-stretch mt-5 justify-center">
-          {domestic.map((item) => (
+          {international.map((item) => (
             <div className=" basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 p-5">
               <Affiliation image={item.image} name={item.name} />
             </div>

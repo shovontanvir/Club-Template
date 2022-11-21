@@ -8,7 +8,6 @@ import ElectionLive from "../pages/ElectionLive";
 import AffiliatedClubs from "../pages/AffiliatedClubs";
 import FoodnBeveragesPage from "../pages/FoodnBeveragesPage";
 import EventPage from "../pages/EventPage";
-import EventDetails from "../pages/EventDetails";
 import Sports from "../pages/Sports";
 import { foodnbev } from "../dummydata/Food&Beverages";
 import halls from "../dummydata/Halls";

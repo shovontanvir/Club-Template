@@ -2,7 +2,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { menuItems } from "./router/Paths";
-import Sports from "./pages/Sports";
 import EventDetails from "./pages/EventDetails";
 
 
