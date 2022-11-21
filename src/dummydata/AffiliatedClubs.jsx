@@ -77,4 +77,6 @@ export const international = [
   },
 ];
 
-export default { domestic, international };
+const affiliatedclubs = { domestic, international };
+
+export default affiliatedclubs;
