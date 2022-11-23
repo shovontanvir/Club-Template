@@ -14,31 +14,37 @@ const SportsMain = () => {
       name: "Indoor Golf",
       title: "Title Goes Here",
       image: indoor1,
+      navigate: "/feature-details",
     },
     {
       name: "Table Tennis",
       title: "Title Goes Here",
       image: indoor2,
+      navigate: "/feature-details",
     },
     {
       name: "Billiard & Snookers",
       title: "Title Goes Here",
       image: indoor3,
+      navigate: "/feature-details",
     },
     {
       name: "Foosball",
       title: "Title Goes Here",
       image: indoor4,
+      navigate: "/feature-details",
     },
     {
       name: "Dartboard",
       title: "Title Goes Here",
       image: indoor5,
+      navigate: "/feature-details",
     },
     {
       name: "Chess",
       title: "Title Goes Here",
       image: indoor6,
+      navigate: "/feature-details",
     },
   ];
   const outdoorSports = [
@@ -46,31 +52,37 @@ const SportsMain = () => {
       name: "Indoor Golf",
       title: "Title Goes Here",
       image: indoor1,
+      navigate: "/feature-details",
     },
     {
       name: "Table Tennis",
       title: "Title Goes Here",
       image: indoor2,
+      navigate: "/feature-details",
     },
     {
       name: "Billiard & Snookers",
       title: "Title Goes Here",
       image: indoor3,
+      navigate: "/feature-details",
     },
     {
       name: "Foosball",
       title: "Title Goes Here",
       image: indoor4,
+      navigate: "/feature-details",
     },
     {
       name: "Dartboard",
       title: "Title Goes Here",
       image: indoor5,
+      navigate: "/feature-details",
     },
     {
       name: "Chess",
       title: "Title Goes Here",
       image: indoor6,
+      navigate: "/feature-details",
     },
   ];
   return (
@@ -86,6 +98,7 @@ const SportsMain = () => {
                 name={item.name}
                 title={item.title}
                 image={item.image}
+                navigate={item.navigate}
               />
             </div>
           ))}
@@ -101,6 +114,7 @@ const SportsMain = () => {
                 name={item.name}
                 title={item.title}
                 image={item.image}
+                navigate={item.navigate}
               />
             </div>
           ))}

@@ -5,7 +5,7 @@ const EventDetailsItem = (props) => {
   return (
     <div className="flex flex-col md:flex-row p-5 justify-between items-center border-b border-dashed border-black my-3">
       <div className="md:w-1/6">
-        <h1 className="font-brand text-brand text-5xl">
+        <h1 className="font-brand text-brand text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {heading[0]} <br className="hidden md:block" /> {heading[1]}
         </h1>
       </div>

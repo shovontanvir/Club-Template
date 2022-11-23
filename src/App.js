@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { menuItems } from "./router/Paths";
 import EventDetails from "./pages/EventDetails";
+import FeatureDetails from "./pages/FeatureDetails";
+import NewsDetails from "./pages/NewsDetails";
 
 
 
@@ -25,6 +27,8 @@ function App() {
               ))
             }
             <Route path="/event-details" element={<EventDetails />} />
+            <Route path="/feature-details" element={<FeatureDetails />} />
+            <Route path="/news-details" element={<NewsDetails />} />
       </Routes>
 
 

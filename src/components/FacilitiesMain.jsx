@@ -13,6 +13,7 @@ const FacilitiesMain = () => {
               name={item.name}
               title={item.title}
               image={item.image}
+              navigate={item.navigate}
             />
           </div>
         </Link>

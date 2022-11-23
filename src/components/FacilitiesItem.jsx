@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const FacilitiesItem = (props) => {
+  const navigate = useNavigate();
   return (
-    <div>
+    <div onClick={() => navigate(props.navigate)}>
       <div className="overflow-hidden relative aspect-square group">
         <img
           alt="member"

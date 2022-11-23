@@ -1,0 +1,66 @@
+import React from "react";
+import ClassicBg from "../components/ClassicBg";
+import YoutubeEmbed from "../components/YoutubeEmbed";
+import newshead from "../images/newshead.png";
+
+const NewsDetails = () => {
+  return (
+    <>
+      <ClassicBg headline="News Details" bgClass="bg-classic" />
+      <div className="flex flex-col items-center">
+        <img src={newshead} alt="news" />
+        <div className="w-3/4 flex flex-col items-center py-12 text-center -mt-[10%] z-20 bg-white">
+          <div className="bg-brand px-3 py-2 w-1/6 text-center my-5">
+            <h1 className="font-poppins">Banani club hall room</h1>
+          </div>
+          <div className="w-3/4 flex flex-col items-center">
+            <h1 className="font-brand text-subBrand xl:text-7xl my-16">
+              Trendy paint color ideas for every room in the house
+            </h1>
+            <p className="font-poppins text-[#6A6E71] leading-8 py-5 text-start">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's standard
+              dummy text ever since the 1500s, when an unknown printer took a
+              galley of type and scrambled it to make a type specimen book.
+            </p>
+            <p className="font-poppins text-[#6A6E71] leading-8 py-5 text-start">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English. Many desktop
+              publishing packages and web page editors now use Lorem Ipsum as
+              their default model text, and a search for 'lorem ipsum' will
+              uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on
+              purpose (injected humour and the like). It is a long established
+              fact that a reader will be distracted by the readable content of a
+              page when looking at its layout.
+            </p>
+
+            <YoutubeEmbed embedId="z-krSTXYshM" />
+
+            <p className="font-poppins text-[#6A6E71] leading-8 py-5 text-start">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default NewsDetails;

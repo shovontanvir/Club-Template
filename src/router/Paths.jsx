@@ -12,6 +12,7 @@ import Sports from "../pages/Sports";
 import { foodnbev } from "../dummydata/Food&Beverages";
 import halls from "../dummydata/Halls";
 import healthnfitness from "../dummydata/HealthFitness";
+import GalleryPage from "../pages/GalleryPage";
 
 export const menuItems = [
   {
@@ -88,7 +89,7 @@ export const menuItems = [
     id: 2,
     name: "Committee",
     path: "/committee",
-    element: <CommitteePage />,
+    element: <CommitteePage headline="Present Committee" />,
     childMenu: [
       {
         name: "Founder Presidents Message",
@@ -237,6 +238,7 @@ export const menuItems = [
     id: 8,
     name: "Gallery",
     path: "/gallery",
+    element: <GalleryPage />,
   },
   {
     id: 9,

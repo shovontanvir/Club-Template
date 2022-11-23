@@ -2,8 +2,8 @@ import React from "react";
 import ClassicBg from "../components/ClassicBg";
 import EventDetailsItem from "../components/EventDetailsItem";
 import MemberItem from "../components/MemberItem";
+import ScheduleItem from "../components/ScheduleItem";
 import events from "../dummydata/Events";
-import calender from "../images/calender.png";
 
 const EventDetails = () => {
   const event = events[0];
@@ -11,39 +11,33 @@ const EventDetails = () => {
     <div>
       <ClassicBg headline={event.name} bgClass="bg-eventdetails" />
 
-      <div className="px-32">
+      <div className="px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         <EventDetailsItem heading="Event Details">
-          <h1>{event.details}</h1>
+          <p className="text-sm md:text-base text-center md:text-start">
+            {event.details}
+          </p>
         </EventDetailsItem>
 
         <EventDetailsItem heading="Event Scedule">
-          <h1 className="flex items-center">
-            <span>
-              <img src={calender} alt="calender icon" className="w-1/2" />
-            </span>
-            <span>
-              {event.startDate +
-                " - " +
-                event.endDate +
-                ": " +
-                event.startTime +
-                " - " +
-                event.endTime}
-            </span>
-          </h1>
+          <ScheduleItem
+            startDate={event.startDate}
+            endDate={event.endDate}
+            startTime={event.startTime}
+            endTime={event.endTime}
+          />
         </EventDetailsItem>
 
         <EventDetailsItem heading="Event Details">
           <h1 className="font-poppins">{event.venue}</h1>
         </EventDetailsItem>
 
-        <div className="px-6">
-          <h1 className="font-brand text-brand text-5xl my-16">
+        <div className="md:px-6">
+          <h1 className="font-brand text-brand  text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl my-4 md:my-12 lg:my-16">
             Event <br className="hidden md:block" /> Guests
           </h1>
           <div className="flex flex-wrap">
             {event.guests.map((guest, index) => (
-              <div className="overflow-hidden relative group basis-1/3 p-5">
+              <div className="overflow-hidden relative group basis-1/3 p-2 sm:p-3 md:p-4 lg:p-5">
                 <MemberItem
                   key={index.toString()}
                   image={guest.guestImage}
@@ -54,12 +48,14 @@ const EventDetails = () => {
             ))}
           </div>
         </div>
-        <div className="w-1/2 relative mx-auto my-16">
-          <div className="absolute inset-0">
-            <img src={event.eventImage[0]} alt="Event" />
-          </div>
-          <div>
-            <img src={event.eventImage[1]} alt="Event" />
+        <div className="pb-8 md:pb-16">
+          <div className="w-3/4 md:w-1/2 relative mx-auto my-8 md:my-16">
+            <div className="">
+              <img src={event.eventImage[0]} alt="Event" />
+            </div>
+            <div className="absolute z-50 -left-[15%] -bottom-[15%] w-1/2 md:w-1/3 aspect-square">
+              <img src={event.eventImage[1]} alt="Event" />
+            </div>
           </div>
         </div>
       </div>

@@ -18,14 +18,14 @@ const MemberItem = (props) => {
               {props.role}
             </div>
           </div>
-          <div>
+          <div className="px-10">
             <FontAwesomeIcon icon={faLinkedin} />
           </div>
         </div>
       </div>
       <img
         alt="member"
-        className=" group-hover:scale-110 transition duration-500 ease-in-out w-full h-full"
+        className=" group-hover:scale-110 transition duration-500 ease-in-out !w-full h-full"
         src={props.image}
       />
     </MemberCard>

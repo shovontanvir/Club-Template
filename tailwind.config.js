@@ -24,6 +24,7 @@ module.exports = {
         'fnb': "url('./images/fnb.png')",
         'events': "url('./images/bgevent.png')",
         'eventdetails': "url('./images/bgeventdetails.png')",
+        'feature': "url('./images/feature.png')",
       }
     },
   },

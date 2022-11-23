@@ -1,7 +1,7 @@
 import React from "react";
 
-const MemberCard = (props) => {
+const GalleryCard = (props) => {
   return <div className="overflow-hidden relative">{props.children}</div>;
 };
 
-export default MemberCard;
+export default GalleryCard;
