@@ -63,7 +63,7 @@ const Menu = (props) => {
                   onClick={props.onClick}
                   className="relative"
                 >
-                  <h1 className="font-brand text-base sm:text-lg md:text-xl lg-text-2xl xl:text-3xl hover:text-brand hover:scale-110 transition duration-300">
+                  <h1 className="font-brand text-base sm:text-lg md:text-xl lg:text-3xl hover:text-brand hover:scale-110 transition duration-300">
                     <span className="pr-4 font-poppins text-sm sm:text-base md:text-lg lg:text-xl text-[#5C5C5C]">
                       {index + 1 < 10
                         ? "0" + (index + 1) + "."
@@ -85,7 +85,7 @@ const Menu = (props) => {
                             ? faMinus
                             : faPlus
                         }
-                        className="text-white text-base sm:text-lg md:text-xl lg-text-2xl xl:text-3xl hover:text-brand hover:scale-125 transition duration-300 cursor-pointer z-[550]"
+                        className="text-base sm:text-lg md:text-xl lg-text-2xl text-[#5C5C5C] hover:text-brand hover:scale-125 transition duration-300 cursor-pointer z-[550]"
                         onClick={() => subMenuHandler(item.id)}
                       />
                     </div>
@@ -105,10 +105,10 @@ const Menu = (props) => {
         </div>
         <div className="w-1/2 hidden sm:flex flex-col justify-center">
           <div className="text-center mb-20">
-            <img src={logo} alt="logo" className="mx-auto mb-5 w-1/2" />
-            <h1 className="lowercase text-white font-poppins tex-xl sm:text-2xl md:text-3xl lg:text-4xl text-5xl font-light">
+            <img src={logo} alt="logo" className="mx-auto mb-5 w-1/4" />
+            {/* <h1 className="lowercase text-white font-poppins tex-xl sm:text-2xl md:text-3xl lg:text-4xl text-5xl font-light">
               Banani Club
-            </h1>
+            </h1> */}
           </div>
           <div className="hidden lg:flex flex-col justify-center">
             <div className="w-1/2 mx-auto my-5">

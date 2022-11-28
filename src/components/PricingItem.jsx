@@ -2,7 +2,7 @@ import React from "react";
 
 const PricingItem = (props) => {
   return (
-    <div className="my-5">
+    <div className="mb-5">
       <div className="flex justify-between border-b border-b-black py-2">
         <div>
           <h1 className="font-brand text-3xl">{props.title}</h1>

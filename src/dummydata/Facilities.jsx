@@ -7,7 +7,6 @@ import facilities6 from "../images/facilities6.png";
 import facilities7 from "../images/facilities7.png";
 import facilities8 from "../images/facilities8.png";
 import facilities9 from "../images/facilities9.png";
-// import FeatureDetails from "../pages/FeatureDetails";
 import Sports from "../pages/Sports";
 
 export const facilities = [

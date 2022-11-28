@@ -11,7 +11,7 @@ const SubMenu = (props) => {
       {props.item.map((cItem, index) => (
         <li className="my-4 cursor-pointer" key={index}>
           <Link to={cItem.path} onClick={props.onClick}>
-            <h1 className="font-brand text-base sm:text-lg md:text-xl lg-text-2xl xl:text-3xl hover:text-brand hover:scale-110 transition duration-300">
+            <h1 className="font-brand text-lg text-[#5C5C5C] hover:text-brand  transition duration-300">
               {cItem.name}
             </h1>
           </Link>

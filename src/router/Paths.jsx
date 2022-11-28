@@ -13,6 +13,7 @@ import { foodnbev } from "../dummydata/Food&Beverages";
 import halls from "../dummydata/Halls";
 import healthnfitness from "../dummydata/HealthFitness";
 import GalleryPage from "../pages/GalleryPage";
+import ContactPage from "../pages/ContactPage";
 
 export const menuItems = [
   {
@@ -250,6 +251,7 @@ export const menuItems = [
     id: 10,
     name: "Contact Us",
     path: "/contact",
+    element: <ContactPage />,
   },
   {
     id: 11,

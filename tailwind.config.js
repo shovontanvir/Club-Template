@@ -11,6 +11,9 @@ module.exports = {
         'subBrand': '#AB815A',
         'about': '#F1EBE2',
       },
+      boxShadow: {
+        'custom': '0px 0px 8px rgba(0, 0, 0, 0.2)',
+      },
       fontFamily: {
         brand: ["Essonnes Display", "sans"],
         poppins: ["Poppins", "sans-serif"],
@@ -25,6 +28,7 @@ module.exports = {
         'events': "url('./images/bgevent.png')",
         'eventdetails': "url('./images/bgeventdetails.png')",
         'feature': "url('./images/feature.png')",
+        'container': "url('./images/container.png')",
       }
     },
   },
