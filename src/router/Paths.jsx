@@ -47,7 +47,7 @@ export const menuItems = [
         name: "Current Presidents Message",
         path: "/current-president-message",
         element: (
-          <PersonsMessage url="http://eidokan.com:3005/banani-club-member/web/v1/advisor-msg" />
+          <PersonsMessage url="https://eidokan.com:3005/banani-club-member/web/v1/advisor-msg" />
         ),
       },
       {
