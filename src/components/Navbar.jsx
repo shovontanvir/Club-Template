@@ -3,8 +3,10 @@ import Button from "./Button";
 import logo from "../images/logo.png";
 import { useState } from "react";
 import Menu from "./Menu";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [menuIsOn, setMenuIsOn] = useState(false);
 
   const disableScroll = () => {
@@ -33,7 +35,9 @@ const Navbar = () => {
     <>
       <div className="md:absolute z-50 top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 md:bg-transparent">
         <div className="flex items-center justify-between px-4 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6 lg:py-8 xl:py-11">
-          <img src={logo} className="w-[4.5625rem]" alt="logo" />
+          <div onClick={() => navigate("/")}>
+            <img src={logo} className="w-[4.5625rem]" alt="logo" />
+          </div>
           <div className="flex items-center">
             <div className="hidden sm:block">
               <Button name="Member Login" />
