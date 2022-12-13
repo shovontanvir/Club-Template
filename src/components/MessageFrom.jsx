@@ -1,39 +1,53 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import GetData from "../services/GetData";
 // import sign from "../images/sign.png";
 
 const MessageFrom = (props) => {
   const [isLoading, setIsLoading] = useState(true);
+  // const [details, setDetails] = useState({});
   const [avatar, setAvatar] = useState();
   const [message, setMessage] = useState();
   const [designation, setDesignation] = useState();
   const [name, setName] = useState();
   const [sign, setSign] = useState();
 
-  const [details, setDetails] = useState({});
+  const setPerson = (details) => {
+    const person = "advisor" in details ? details.advisor : details.president;
+    "advisorType" in person
+      ? setDesignation(
+          `${
+            person.advisorType.charAt(0).toUpperCase() +
+            person.advisorType.slice(1)
+          } Advisor`
+        )
+      : setDesignation(
+          `${
+            person.presidentType.charAt(0).toUpperCase() +
+            person.presidentType.slice(1)
+          } President`
+        );
+    setName(person.name);
+    setAvatar(`${process.env.REACT_APP_IMAGE_BASE_URL}` + person.image);
+    setMessage(person.message);
+    setSign(`${process.env.REACT_APP_IMAGE_BASE_URL}` + person.signature);
+  };
 
   useEffect(() => {
     const fetchMessage = async () => {
-      const res = await axios.get(props.url);
+      console.log(props.url);
+      const res = await GetData(props.url);
       const data = await res.data.data;
-      setDetails(data.advisor);
+      // console.log(data);
       setIsLoading(false);
-      setDesignation(
-        `${
-          details.advisorType.charAt(0).toUpperCase() +
-          details.advisorType.slice(1)
-        } Advisor`
-      );
-      setName(details.name);
-      setAvatar(details.image);
-      setMessage(details.message);
-      setSign(details.signature);
+
+      !isLoading && (await setPerson(data));
+      console.log("changed");
     };
 
     fetchMessage();
-  }, [isLoading]);
+  }, [props.url, isLoading]);
 
   return (
     <div className="flex flex-col sm:flex-row px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 py-28 relative ">
