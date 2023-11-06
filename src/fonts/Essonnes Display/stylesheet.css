@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('EssonnesDisplay-Regular.eot');
+    src: local('Essonnes Display'), local('EssonnesDisplay-Regular'),
+        url('EssonnesDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('EssonnesDisplay-Regular.woff2') format('woff2'),
+        url('EssonnesDisplay-Regular.woff') format('woff'),
+        url('EssonnesDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('EssonnesDisplay-Light.eot');
+    src: local('Essonnes Display Light'), local('EssonnesDisplay-Light'),
+        url('EssonnesDisplay-Light.eot?#iefix') format('embedded-opentype'),
+        url('EssonnesDisplay-Light.woff2') format('woff2'),
+        url('EssonnesDisplay-Light.woff') format('woff'),
+        url('EssonnesDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('EssonnesDisplay-Bold.eot');
+    src: local('Essonnes Display Bold'), local('EssonnesDisplay-Bold'),
+        url('EssonnesDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('EssonnesDisplay-Bold.woff2') format('woff2'),
+        url('EssonnesDisplay-Bold.woff') format('woff'),
+        url('EssonnesDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

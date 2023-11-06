@@ -1,0 +1,325 @@
+{
+    "health-fitness" : [
+        {
+            "name": "Club Gym",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Swimming Pool",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Yoga",
+            "image": "images/bakery.png"
+        }
+    ],
+    "facilities" : [
+        {
+            "name": "Restaurent",
+            "title": "Title Goes Here",
+            "image": "images/facilities1.png"
+        },
+        {
+            "name": "Bakery & Cafe",
+            "title": "Title Goes Here",
+            "image": "images/facilities2.png"
+        },
+        {
+            "name": "Personal Care",
+            "title": "Title Goes Here",
+            "image": "images/facilities3.png"
+        },
+        {
+            "name": "Laundry",
+            "title": "Title Goes Here",
+            "image": "images/facilities4.png"
+        },
+        {
+            "name": "Health & Fitness",
+            "title": "Title Goes Here",
+            "image": "images/facilities5.png"
+        },
+        {
+            "name": "Bar",
+            "title": "Title Goes Here",
+            "image": "images/facilities6.png"
+        },
+        {
+            "name": "Prayer Room",
+            "title": "Title Goes Here",
+            "image": "images/facilities7.png"
+        },
+        {
+            "name": "Lobby Lounge",
+            "title": "Title Goes Here",
+            "image": "images/facilities8.png"
+        },
+        {
+            "name": "Sports",
+            "title": "Title Goes Here",
+            "image": "images/facilities9.png"
+        }
+    ],
+    "food-beverages" : [
+        {
+            "name": "Dawat",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Bar",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Bakery & Cafe",
+            "image": "images/bakery.png"
+        }
+    ],
+    "personal-care" : [
+        {
+            "name": "Gents Salon",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Womens Parlour",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Spa & Yoga",
+            "image": "images/bakery.png"
+        }
+    ],
+    "message-from": {
+        "avatar": "images/avatar1.png",
+        "designation": "president",
+        "messageBody": "<p>I would like to convey my sincerest thanks and heartfelt gratitude for electing me as President of the Banani Club. I was deeply touched and honored. I assure you that I shall make all endeavors to the best of my ability.<p><br /> <p>I would like to Congratulations to all the elected members of the Executive Committee 2019-2020.<p>",
+        "name": "John Doe",
+        "desihnationType": "Present",
+        "linkedinUrl": "",
+        "signature": "images/sign.png"
+    },
+    "club-history": {
+        "image": "images/club-history.png",
+        "history": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <p><br /> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and </p><br/><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and <p><br /> <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and </p>"
+    },
+    "committee": [
+      {
+        "image": "images/ec1.png",
+        "name": "Abul Kalam Azad",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec2.png",
+        "name": "Mohammad Masud Rana",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec3.png",
+        "name": "Mahedi Mosharrof",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec4.png",
+        "name": "Md. Rashedul Niloy",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec5.png",
+        "name": "Safayet Abdullah",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec6.png",
+        "name": "Sharmin Shilpy",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec7.png",
+        "name": "Rafiuzzamam Sifat",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec8.png",
+        "name": "Ummae Hamida",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec9.png",
+        "name": "Tanvir Anjum",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      },
+      {
+        "image": "images/ec10.png",
+        "name": "Forhad Naim Mithun",
+        "role": "Member Administration",
+        "details":
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+      }
+    ],
+    "halls": [
+        {
+            "name": "Banquet Hall",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Amber Terrace",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Mehfil",
+            "image": "images/bakery.png"
+        }
+    ],
+    "club-residence": [
+        {
+            "name": "Room-1",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Room-2",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Room-2",
+            "image": "images/bakery.png"
+        },
+        {
+            "name": "Room-4",
+            "image": "images/dawat.png"
+        },
+        {
+            "name": "Room-5",
+            "image": "images/bar.png"
+        },
+        {
+            "name": "Room-6",
+            "image": "images/bakery.png"
+        }
+    ],
+    "feature-details": {
+        "title": "Billiards and Snooker",
+        "feature": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+        "pricing": [
+            {
+                "title": "Pricing Title 1",
+                "price": "BDT 200",
+                "details": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            },
+            {
+                "title": "Pricing Title 2",
+                "price": "BDT 500",
+                "details": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            }
+        ],
+        "timing": [
+            {
+                "title": "Timing Title 1",
+                "startDate": "Monday",
+                "endDate": "Friday",
+                "startTime": "10.00",
+                "endTime": "18.30",
+                "details": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            },
+            {
+                "title": "Timing Title 2",
+                "startDate": "Friday",
+                "endDate": "Monday",
+                "startTime": "13.00",
+                "endTime": "20.30",
+                "details": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+            }
+        ],
+        "rules": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+    },
+    "sports": [
+        {
+            "name": "Indoor Sports",
+            "image":"images/bar.png",
+            "games": [
+                {
+                    "name": "Indoor Golf",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor1.png"
+                },
+                {
+                    "name": "Table Tennis",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor2.png"
+                },
+                {
+                    "name": "Billiards & Snooker",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor3.png"
+                },
+                {
+                    "name": "Foosball",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor4.png"
+                },
+                {
+                    "name": "Dartboard",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor5.png"
+                },
+                {
+                    "name": "Chess",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor6.png"
+                }
+            ]
+        },
+        {
+            "name": "OutDoor Sports",
+            "image":"images/dawat.png",
+            "games": [
+                {
+                    "name": "Indoor Golf",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor1.png"
+                },
+                {
+                    "name": "Table Tennis",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor2.png"
+                },
+                {
+                    "name": "Billiards & Snooker",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor3.png"
+                },
+                {
+                    "name": "Foosball",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor4.png"
+                },
+                {
+                    "name": "Dartboard",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor5.png"
+                },
+                {
+                    "name": "Chess",
+                    "title": "Title Goes Here",
+                    "image": "images/indoor6.png"
+                }
+            ]
+        }
+    ]
+}

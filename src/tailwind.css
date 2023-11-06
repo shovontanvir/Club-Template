@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* custom font setup local */
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('../src/fonts/Essonnes Display/EssonnesDisplay-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('../src/fonts/Essonnes Display/EssonnesDisplay-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Essonnes Display';
+    src: url('../src/fonts/Essonnes Display/EssonnesDisplay-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* swiper classes */
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    position: absolute;
+    bottom: 5% !important;
+}
+
+.swiper-pagination-current {
+    font-size: calc(1.5rem + 1vmin);
+    font-family: "Poppins", "sans-serif";
+}
+
+.swiper-pagination-total {
+    font-family: "Poppins", "sans-serif";
+}
+
+.swiper-slide {
+    padding-block: 20px;
+}
+
+.swiper-scrollbar {
+    background: #303030 !important;
+    width: 50% !important;
+    height: 2px !important;
+    transform: translateX(50%) !important;
+}
+
+.swiper-scrollbar-drag {
+    background: #C89538 !important;
+}
+
