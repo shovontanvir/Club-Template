@@ -4,7 +4,7 @@ import { getApiData } from "../../Services/apiFunctions";
 import { useQuery } from "@tanstack/react-query";
 import FeatureDetailsItem from "./partials/FeatureDetailsItem";
 import PricingItem from "./partials/PricingItem";
-import ScheduleItem from "./partials/ScheduleItem";
+import ScheduleItem from "../../components/ScheduleItem";
 
 const FeatureDetails = ({ url }) => {
   const getFeatureDetails = () => {

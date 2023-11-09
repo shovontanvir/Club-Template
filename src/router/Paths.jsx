@@ -5,6 +5,7 @@ import Contact from "../pages/Contact/Contact";
 
 import ECMembers from "../pages/ECMembers/ECMembers";
 import ElectionLive from "../pages/ElelctionLive/ElectionLive";
+import Event from "../pages/Event/Event";
 import Facilities from "../pages/Facilities/Facilities";
 import FeatureDetails from "../pages/FeatureDetails/FeatureDetails";
 import Gallery from "../pages/Gallery/Gallery";
@@ -208,7 +209,7 @@ export const menuItems = [
     id: 6,
     name: "Event Calender",
     path: "/event-calender",
-    // element: <EventPage />,
+    element: <Event />,
   },
   {
     id: 7,

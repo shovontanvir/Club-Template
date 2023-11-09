@@ -498,5 +498,123 @@
         "twitterUrl": "#",
         "gmailUrl": "#",
         "linkUrl": "#"
-    }
+    },
+    "events": [
+        {
+            "name": "Table Tennis",
+            "details":
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+            "startDate": "Monday",
+            "endDate": "Friday",
+            "startTime": "10.00",
+            "endTime": "18.30",
+            "image": "images/tabletennis.png",
+            "venue": "Banani Club Hall Room",
+            "guests": [
+            {
+                "guestImage":"images/ec1.png",
+                "guestName": "Abul Kalam Azad",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec2.png",
+                "guestName": "Mohammad Masud Rana",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec3.png",
+                "guestName": "Mahedi Mosharrof",
+                "guestRole": "Member Administration"
+            }
+            ],
+            "eventImage": ["images/event1.png", "images/event2.png"]
+        },
+        {
+            "name": "Chess",
+            "details":
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+            "startDate": "Monday",
+            "endDate": "Friday",
+            "startTime": "10.00",
+            "endTime": "18.30",
+            "image": "images/chess.png",
+            "venue": "Banani Club Hall Room",
+            "guests": [
+            {
+                "guestImage":"images/ec1.png",
+                "guestName": "Abul Kalam Azad",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec2.png",
+                "guestName": "Mohammad Masud Rana",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec3.png",
+                "guestName": "Mahedi Mosharrof",
+                "guestRole": "Member Administration"
+            }
+            ],
+            "eventImage": ["images/event1.png", "images/event2.png"]
+        },
+        {
+            "name": "Christmass Day Event",
+            "details":
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+            "startDate": "Monday",
+            "endDate": "Friday",
+            "startTime": "10.00",
+            "endTime": "18.30",
+            "image": "images/xmass.png",
+            "venue": "Banani Club Hall Room",
+            "guests": [
+            {
+                "guestImage":"images/ec1.png",
+                "guestName": "Abul Kalam Azad",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec2.png",
+                "guestName": "Mohammad Masud Rana",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec3.png",
+                "guestName": "Mahedi Mosharrof",
+                "guestRole": "Member Administration"
+            }
+            ],
+            "eventImage": ["images/event1.png", "images/event2.png"]
+        },
+        {
+            "name": "Table Tennis",
+            "details":
+            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+            "startDate": "Monday",
+            "endDate": "Friday",
+            "startTime": "10.00",
+            "endTime": "18.30",
+            "image": "images/tabletennis.png",
+            "venue": "Banani Club Hall Room",
+            "guests": [
+            {
+                "guestImage":"images/ec1.png",
+                "guestName": "Abul Kalam Azad",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec2.png",
+                "guestName": "Mohammad Masud Rana",
+                "guestRole": "Member Administration"
+            },
+            {
+                "guestImage":"images/ec3.png",
+                "guestName": "Mahedi Mosharrof",
+                "guestRole": "Member Administration"
+            }
+            ],
+            "eventImage": ["images/event1.png", "images/event2.png"]
+        }
+    ]
 }

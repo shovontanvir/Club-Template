@@ -5,6 +5,8 @@ import { Route, Routes } from "react-router-dom";
 import { menuItems } from "./router/Paths";
 import FeatureDetails from "./pages/FeatureDetails/FeatureDetails";
 import NewsDetails from "./pages/NewsDetails/NewsDetails";
+import Navbar from "./components/Navbar";
+import EventDetails from "./pages/EventDetails/EventDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -15,8 +17,7 @@ function App() {
 
   return (
     <>
-      {/* <Landing /> */}
-      {/* <Facilities url="facilities" /> */}
+      <Navbar />
 
       <Routes>
         {menuItems.map((item, index) => (
@@ -37,7 +38,7 @@ function App() {
               ))
             : null
         )}
-        {/* <Route path="/event-details" element={<EventDetails />} /> */}
+        <Route path="/event-details" element={<EventDetails />} />
         <Route path="/feature-details" element={<FeatureDetails />} />
         <Route path="/news-details" element={<NewsDetails />} />
       </Routes>
