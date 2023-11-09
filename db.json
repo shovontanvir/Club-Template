@@ -321,5 +321,182 @@
                 }
             ]
         }
-    ]
+    ],
+    "affiliated-clubs": [
+        {
+            "title": "Domestic",
+            "clubs": [
+                {
+                    "name": "Dhaka Club",
+                    "image": "images/dhakaclub.png"
+                },
+                {
+                    "name": "Gulshan Club",
+                    "image": "images/gulshanclub.png"
+                },
+                {
+                    "name": "Dhaka Boat Club",
+                    "image": "images/dhakaboatclub.png"
+                },
+                {
+                    "name": "Khulna Club",
+                    "image": "images/khulnaclub.png"
+                },
+                {
+                    "name": "Dhanmondi Club",
+                    "image": "images/dhanmondiclub.png"
+                },
+                {
+                    "name": "Officers Club",
+                    "image": "images/officersclub.png"
+                },
+                {
+                    "name": "Uttara Club",
+                    "image": "images/uttaraclub.png"
+                },
+                {
+                    "name": "Chittagong Club",
+                    "image": "images/chittagongclub.png"
+                }
+            ]
+        },
+        {
+            "title": "International",
+            "clubs": [
+                {
+                    "name": "Dhaka Club",
+                    "image": "images/dhakaclub.png"
+                },
+                {
+                    "name": "Gulshan Club",
+                    "image": "images/gulshanclub.png"
+                },
+                {
+                    "name": "Dhaka Boat Club",
+                    "image": "images/dhakaboatclub.png"
+                },
+                {
+                    "name": "Khulna Club",
+                    "image": "images/khulnaclub.png"
+                },
+                {
+                    "name": "Dhanmondi Club",
+                    "image": "images/dhanmondiclub.png"
+                },
+                {
+                    "name": "Officers Club",
+                    "image": "images/officersclub.png"
+                },
+                {
+                    "name": "Uttara Club",
+                    "image": "images/uttaraclub.png"
+                },
+                {
+                    "name": "Chittagong Club",
+                    "image": "images/chittagongclub.png"
+                }
+            ]
+        }
+    ],
+    "gallery": [
+        {
+            "title": "Gallery Title 1",
+            "images": [
+            {
+                "image": "images/gallery1.png",
+                "title": "Photo Title 1"
+            },
+            {
+                "image": "images/gallery2.png",
+                "title": "Photo Title 2"
+            },
+            {
+                "image": "images/gallery3.png",
+                "title": "Photo Title 3"
+            },
+            {
+                "image": "images/gallery4.png",
+                "title": "Photo Title 4"
+            },
+            {
+                "image": "images/gallery5.png",
+                "title": "Photo Title 5"
+            }
+            ]
+        },
+        {
+            "title": "Gallery Title 2",
+            "images": [
+            {
+                "image": "images/gallery6.png",
+                "title": "Photo Title 1"
+            },
+            {
+                "image": "images/gallery7.png",
+                "title": "Photo Title 2"
+            },
+            {
+                "image": "images/gallery8.png",
+                "title": "Photo Title 3"
+            },
+            {
+                "image": "images/gallery9.png",
+                "title": "Photo Title 4"
+            },
+            {
+                "image": "images/gallery10.png",
+                "title": "Photo Title 5"
+            }
+            ]
+        }
+    ],
+    "news": [
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        },
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        },
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        },
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        },
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        },
+        {
+            "venue": "Banani club hall room",
+            "date": "Dec 29, 2023",
+            "newsHeadline": "Trendy paint color ideas for every room in the house",
+            "image": "images/news.png"
+        }
+    ],
+    "news-details": {
+        "headerImage": "images/newshead.png",
+        "venue": "Banani Club Hallroom",
+        "headline": "Trendy paint color ideas for every room in the house",
+        "description": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p><br/><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>(#)<p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>",
+        "videoLink": "z-krSTXYshM",
+        "facebookUrl": "#",
+        "twitterUrl": "#",
+        "gmailUrl": "#",
+        "linkUrl": "#"
+    }
 }

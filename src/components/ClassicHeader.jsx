@@ -5,7 +5,7 @@ const ClassicHeader = ({ bgClass, headline }) => {
     <div
       className={`${bgClass} h-[50vh] flex items-center justify-center relative`}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       {/* <MovingComponent
         type="unfold"
         duration="1200ms"

@@ -1,10 +1,16 @@
+import AffiliatedClubs from "../pages/AffiliatedClubs/AffiliatedClubs";
 import ClubHistory from "../pages/ClubHistory/ClubHistory";
 import Commitee from "../pages/Commitee/Commitee";
+import Contact from "../pages/Contact/Contact";
 
 import ECMembers from "../pages/ECMembers/ECMembers";
+import ElectionLive from "../pages/ElelctionLive/ElectionLive";
 import Facilities from "../pages/Facilities/Facilities";
+import FeatureDetails from "../pages/FeatureDetails/FeatureDetails";
+import Gallery from "../pages/Gallery/Gallery";
 import Landing from "../pages/Landing/Landing";
 import MessageFrom from "../pages/MessageFrom/MessageFrom";
+import News from "../pages/News/News";
 import SubFacilities from "../pages/SubFacilities/SubFacilities";
 
 export const menuItems = [
@@ -107,7 +113,7 @@ export const menuItems = [
     id: 3,
     name: "Affiliation",
     path: "/affiliation",
-    // element: <AffiliatedClubs />,
+    element: <AffiliatedClubs />,
   },
   {
     id: 4,
@@ -171,17 +177,17 @@ export const menuItems = [
       {
         name: "Laundry",
         path: "/laundry",
-        // element: < />
+        element: <FeatureDetails />,
       },
       {
         name: "Prayer Room",
         path: "/prayer-room",
-        // element: < />
+        element: <FeatureDetails />,
       },
       {
         name: "Lobby Lounge",
         path: "/lobby-lounge",
-        // element: < />
+        element: <FeatureDetails />,
       },
       {
         name: "Sports",
@@ -196,12 +202,12 @@ export const menuItems = [
     id: 5,
     name: "News",
     path: "/news",
-    // element: <NewsPage />,
+    element: <News />,
   },
   {
     id: 6,
     name: "Event Calender",
-    path: "/eventcalender",
+    path: "/event-calender",
     // element: <EventPage />,
   },
   {
@@ -213,19 +219,19 @@ export const menuItems = [
     id: 8,
     name: "Gallery",
     path: "/gallery",
-    // element: <GalleryPage />,
+    element: <Gallery />,
   },
   {
     id: 9,
     name: "Election",
     path: "/election",
-    // element: <ElectionLive />,
+    element: <ElectionLive />,
   },
   {
     id: 10,
     name: "Contact Us",
     path: "/contact",
-    // element: <ContactPage />,
+    element: <Contact />,
   },
   {
     id: 11,

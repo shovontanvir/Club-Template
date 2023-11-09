@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import { menuItems } from "./router/Paths";
 import FeatureDetails from "./pages/FeatureDetails/FeatureDetails";
+import NewsDetails from "./pages/NewsDetails/NewsDetails";
 
 function App() {
   const { pathname } = useLocation();
@@ -38,7 +39,7 @@ function App() {
         )}
         {/* <Route path="/event-details" element={<EventDetails />} /> */}
         <Route path="/feature-details" element={<FeatureDetails />} />
-        {/* <Route path="/news-details" element={<NewsDetails />} /> */}
+        <Route path="/news-details" element={<NewsDetails />} />
       </Routes>
 
       <Footer />
