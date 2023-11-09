@@ -8,6 +8,11 @@ import { useNavigate } from "react-router";
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuIsOn, setMenuIsOn] = useState(false);
+  const [navBg, setNavBg] = useState(false);
+
+  const navBgHandler = () => {
+    window.scrollY >= 145 ? setNavBg(true) : setNavBg(false);
+  };
 
   const disableScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -22,6 +27,8 @@ const Navbar = () => {
     window.onscroll = function () {};
   };
 
+  window.addEventListener("scroll", navBgHandler);
+
   const openMenu = () => {
     setMenuIsOn(true);
     disableScroll();
@@ -33,7 +40,11 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="md:fixed z-50 top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 md:bg-transparent">
+      <div
+        className={`md:fixed z-50 top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 ${
+          !menuIsOn && navBg ? "md:bg-bgHome" : "md:bg-transparent"
+        } transition-all duration-300`}
+      >
         <div className="flex items-center justify-between px-4 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6 lg:py-8 xl:py-11">
           <div onClick={() => navigate("/")}>
             <img src={logo} className="w-[4.5625rem]" alt="logo" />

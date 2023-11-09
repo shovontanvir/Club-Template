@@ -20,7 +20,7 @@ const EventDetails = () => {
   if (isError) return error.message;
 
   const eventDetails = data[0];
-  console.log(eventDetails);
+
   return (
     <>
       <ClassicHeader headline={eventDetails.name} bgClass="bg-eventdetails" />
@@ -48,7 +48,10 @@ const EventDetails = () => {
           </h1>
           <div className="flex flex-wrap">
             {eventDetails.guests.map((guest, index) => (
-              <div className="overflow-hidden relative group basis-1/3 p-2 sm:p-3 md:p-4 lg:p-5">
+              <div
+                className="overflow-hidden relative group basis-1/3 p-2 sm:p-3 md:p-4 lg:p-5"
+                key={guest.guestName}
+              >
                 <MemberItem
                   key={index.toString()}
                   image={guest.guestImage}
