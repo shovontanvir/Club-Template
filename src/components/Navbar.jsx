@@ -41,16 +41,16 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`md:fixed z-50 top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 ${
+        className={`md:fixed z-[999] top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 ${
           !menuIsOn && navBg ? "md:bg-bgHome" : "md:bg-transparent"
-        } transition-all duration-300`}
+        }`}
       >
-        <div className="flex items-center justify-between px-4 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6 lg:py-8 xl:py-11">
+        <div className="flex items-center justify-between px-4 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6">
           <div onClick={() => navigate("/")}>
             <img src={logo} className="w-[4.5625rem]" alt="logo" />
           </div>
           <div className="flex items-center">
-            <div className="hidden sm:block">
+            <div className="hidden sm:block" onClick={() => navigate("/login")}>
               <Button name="Member Login" />
             </div>
             <div

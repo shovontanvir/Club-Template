@@ -34,7 +34,7 @@ const Menu = (props) => {
   return (
     <div>
       <div
-        className={`h-screen w-screen bg-menu fixed inset-0 z-[100] flex items-center px-8 sm:px-16 md:px-32 transition duration-1000 ease-in-out ${
+        className={`h-screen w-screen overflow-y-scroll bg-menu fixed inset-0 z-[1000] flex items-center px-8 sm:px-16 md:px-32 transition duration-1000 ease-in-out ${
           props.isOn ? "block" : "hidden"
         }`}
       >

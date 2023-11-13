@@ -10,6 +10,8 @@ import Facilities from "../pages/Facilities/Facilities";
 import FeatureDetails from "../pages/FeatureDetails/FeatureDetails";
 import Gallery from "../pages/Gallery/Gallery";
 import Landing from "../pages/Landing/Landing";
+import Login from "../pages/Login/Login";
+import LoginLayout from "../pages/Login/LoginLayout";
 import MessageFrom from "../pages/MessageFrom/MessageFrom";
 import News from "../pages/News/News";
 import SubFacilities from "../pages/SubFacilities/SubFacilities";
@@ -34,9 +36,7 @@ export const menuItems = [
       {
         name: "Founder Members",
         path: "/founder-members",
-        element: (
-          <ECMembers headline="Present Executive Committee" url="committee" />
-        ),
+        element: <ECMembers headline="Founder Members" url="committee" />,
       },
       {
         name: "Current Presidents Message",
@@ -104,9 +104,7 @@ export const menuItems = [
       {
         name: "Present Sub Committee",
         path: "/present-sub-committee",
-        element: (
-          <ECMembers headline="Present Executive Committee" url="committee" />
-        ),
+        element: <ECMembers headline="Present Sub Committee" url="committee" />,
       },
     ],
   },
@@ -238,6 +236,7 @@ export const menuItems = [
     id: 11,
     name: "Login",
     path: "/login",
+    element: <LoginLayout />,
   },
 ];
 

@@ -4,6 +4,8 @@ const liveApiUrl = import.meta.env.VITE_REACT_APP_API_LIVE_URL;
 
 const liveImageUrl = import.meta.env.VITE_REACT_APP_IMAGE_API_LIVE_URL;
 
+const dummyUrl = import.meta.env.VITE_REACT_APP_API_DUMMY_URL
+
 const token = localStorage.getItem("token");
 
 
@@ -12,9 +14,9 @@ const token = localStorage.getItem("token");
 export const getApiData = (url) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${liveApiUrl}/${url}`, {
+      .get(`${dummyUrl}/${url}`, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
+          Authorization: `${localStorage.getItem("access_token")}`
         }
       } )
       .then((response) => {
@@ -31,7 +33,7 @@ export const getApiData = (url) => {
 export const postApiData = async (url, data) => {
 
   // axios
-  //     .post(`${liveApiUrl}/${url}`, data, {
+  //     .post(`${dummyUrl}/${url}`, data, {
   //       headers: {
   //         Authorization: `Bearer ${localStorage.getItem("token")}`
   //       }
@@ -39,9 +41,9 @@ export const postApiData = async (url, data) => {
 
   return new Promise((resolve, reject) => {
     axios
-      .post(`${liveApiUrl}/${url}`, data, {
+      .post(`${dummyUrl}/${url}`, data, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
+          Authorization: `${localStorage.getItem("access_token")}`
         }
       } )
       .then((response) => {
