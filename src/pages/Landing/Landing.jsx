@@ -14,8 +14,11 @@ const Landing = () => {
         <About />
         <TheClub />
       </div>
-      <MessageComponent url="message-from" />
-      <Committe url="committee" heading="Executive Committee - 2022" />
+      <MessageComponent url="club/message/get?messageFrom=Founder President Message" />
+      <Committe
+        url="ec-member-list?page=1&searchKey=&size=10"
+        heading="Executive Committee - 2022"
+      />
       <Facilities />
     </>
   );

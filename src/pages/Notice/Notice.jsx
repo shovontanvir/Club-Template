@@ -4,21 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import ClassicHeader from "../../components/ClassicHeader";
 import NoticeListCard from "./partials/NoticeListCard";
+import { Link } from "react-router-dom";
 
 const Notice = () => {
   const getNoticeList = () => {
-    return new Promise((resolve, reject) => {
-      axios
-        .get("http://eidokan.com:3005/bc-member/api/v1/notice-list", {
-          headers: {
-            Authorization: `${localStorage.getItem("access_token")}`,
-          },
-        })
-        .then((response) => {
-          resolve(response);
-        })
-        .catch(reject);
-    });
+    return getApiData("notice-list?page=1&searchKey=&size=5");
   };
 
   const { isLoading, isError, error, data } = useQuery(
@@ -29,8 +19,9 @@ const Notice = () => {
   if (isLoading) return "Loading Notices... .. .. ";
   if (isError) return error.message;
 
-  const noticeList = data?.data?.data?.noticePage?.notices;
+  const noticeList = data?.data?.noticePage?.notices;
   console.log(noticeList);
+  const mediaPath = data?.data?.mediaPath;
 
   const getMonthName = (month) => {
     switch (month) {
@@ -63,22 +54,27 @@ const Notice = () => {
     }
   };
 
-  console.log(noticeList);
   return (
     <>
       <ClassicHeader headline="Club Notice" bgClass="bg-classic" />
       <section className="w-screen px-48 py-16">
         <div className="bg-about py-16 px-32">
           {noticeList.map((notice, index) => (
-            <NoticeListCard
-              date={notice.createdAt.split("T")[0].split("-")[2]}
-              month={getMonthName(
-                Number(notice.createdAt.split("T")[0].split("-")[1])
-              )}
-              noticeText={notice.message}
-              name={notice.createdBy.name}
+            <a
+              href={mediaPath + notice.attachment}
+              target="blank"
               key={notice.message + index}
-            />
+            >
+              <NoticeListCard
+                date={notice.createdAt.split("T")[0].split("-")[2]}
+                month={getMonthName(
+                  Number(notice.createdAt.split("T")[0].split("-")[1])
+                )}
+                noticeText={notice.title}
+                noticeBody={notice.body}
+                name={notice.createdBy.name}
+              />
+            </a>
           ))}
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Scrollbar } from "swiper/modules";
-
+import axios from "axios";
 import prev from "../../../assets/images/globals/prev.png";
 import next from "../../../assets/images/globals/next.png";
 
@@ -19,7 +19,7 @@ const Facilities = () => {
 
   //   query data
   const getFacilitiesData = () => {
-    return getApiData("facilities");
+    return getApiData("club/facilities/list");
   };
 
   const { isLoading, isError, error, data } = useQuery(
@@ -30,8 +30,22 @@ const Facilities = () => {
   if (isLoading) return "Loading Data... ... ...";
   if (isError) return error.meassage;
 
-  const facilities = data;
+  const facilities = data?.data?.facilities;
   // console.log(facilities);
+  const mediaPath = data?.data?.mediaPath;
+
+  const navigationHandler = (type, id, childId) => {
+    switch (type) {
+      case "Restaurant":
+        return `/food-beverages/${id}`;
+      case "Sports":
+        return `/sports/${id}`;
+      case "Booking":
+        return "/booking";
+      default:
+        return `/facility-details/${id}/${childId}`;
+    }
+  };
 
   return (
     <div className="relative">
@@ -41,8 +55,11 @@ const Facilities = () => {
         </h1>
         <div className="mt-10">
           <Swiper
-            slidesPerView={2}
+            slidesPerView={1}
             breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
               768: {
                 slidesPerView: 3,
               },
@@ -63,26 +80,37 @@ const Facilities = () => {
               <SwiperSlide key={item.name}>
                 <FacilitiesItem
                   name={item.name}
-                  title={item.title}
-                  image={item.image}
+                  // title={item.name}
+                  image={mediaPath + item.coverImage}
+                  navigateTo={
+                    !item.type === "Others"
+                      ? navigationHandler(item.type, item._id)
+                      : item.type === "Others" && item.items.length === 0
+                      ? null
+                      : navigationHandler(
+                          item.type,
+                          item._id,
+                          item.items[0]?._id
+                        )
+                  }
                 />
               </SwiperSlide>
             ))}
 
-            <div className="flex justify-between pr-20 items-center translate-y-1/2">
+            <div className="flex justify-between md:pr-20 items-center translate-y-1/2">
               <button
                 onClick={() => {
                   swiperRef.current?.slidePrev();
                 }}
               >
-                <img src={prev} alt="prev" />
+                <img src={prev} alt="prev" className="w-16" />
               </button>
               <button
                 onClick={() => {
                   swiperRef.current?.slideNext();
                 }}
               >
-                <img src={next} alt="next" />
+                <img src={next} alt="next" className="w-16" />
               </button>
             </div>
           </Swiper>

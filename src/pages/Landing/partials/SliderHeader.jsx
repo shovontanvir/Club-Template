@@ -21,10 +21,10 @@ import "swiper/css/effect-fade";
 
 const SliderHeader = () => {
   return (
-    <div className="h-[50vh] md:h-screen w-full bg-bgHome">
-      <div className="relative bg-hero-patternk bg-cover h-full">
+    <div className=" sm:h-screen w-full bg-bgHome">
+      <div className="relative  bg-cover h-full">
         <Swiper
-          effect={"cube"}
+          // effect={"cube"}
           cubeEffect={{
             shadow: false,
           }}
@@ -36,11 +36,11 @@ const SliderHeader = () => {
             formatFractionTotal: (total) => total,
             dynamicMainBullets: 5,
           }}
-          direction={"vertical"}
-          autoplay={{
-            delay: 2000,
-            disableOnInteraction: false,
-          }}
+          // direction={"vertical"}
+          // autoplay={{
+          //   delay: 2000,
+          //   disableOnInteraction: false,
+          // }}
           loop={true}
           modules={[
             Pagination,
@@ -53,7 +53,7 @@ const SliderHeader = () => {
           className="mySwiper h-full w-full text-white text-center"
         >
           <SwiperSlide>
-            <div className="w-full h-full p-8 sm:p-12 md:p-16 lg:p-24 xl:p-32">
+            <div className="w-full h-full p-8 md:p-16 lg:p-24 xl:p-32">
               <img src={header} alt="header" className="h-full w-full" />
             </div>
           </SwiperSlide>
@@ -90,9 +90,9 @@ const SliderHeader = () => {
           <img src={club} alt="club" />
         </div>
       </div>
-      <div className="absolute px-32 right-0 bottom-[6%]">
+      {/* <div className="absolute px-32 right-0 bottom-[6%]">
         <h1 className="text-white font-poppins">Scroll Down</h1>
-      </div>
+      </div> */}
     </div>
   );
 };

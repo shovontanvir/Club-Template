@@ -13,8 +13,10 @@ const token = localStorage.getItem("token");
 // function to get data from api using axios
 export const getApiData = (url) => {
   return new Promise((resolve, reject) => {
+
+  // console.log(`${liveApiUrl}/${url}`)
     axios
-      .get(`${dummyUrl}/${url}`, {
+      .get(`${liveApiUrl}/${url}`, {
         headers: {
           Authorization: `${localStorage.getItem("access_token")}`
         }
@@ -41,7 +43,7 @@ export const postApiData = async (url, data) => {
 
   return new Promise((resolve, reject) => {
     axios
-      .post(`${dummyUrl}/${url}`, data, {
+      .post(`${liveApiUrl}/${url}`, data, {
         headers: {
           Authorization: `${localStorage.getItem("access_token")}`
         }

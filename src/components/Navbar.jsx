@@ -38,28 +38,39 @@ const Navbar = () => {
     enableScroll();
   };
 
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
   return (
     <>
       <div
-        className={`md:fixed z-[999] top-0 w-full bg-bgHome border-b border-gray-500 md:border-b-0 ${
+        className={`sticky md:fixed z-[999] top-0 w-full bg-bgHome ${
           !menuIsOn && navBg ? "md:bg-bgHome" : "md:bg-transparent"
         }`}
       >
-        <div className="flex items-center justify-between px-4 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6">
+        <div className="flex items-center justify-between px-8 sm:px-16 md:px-32 py-2 sm:py-5 md:py-6">
           <div onClick={() => navigate("/")}>
-            <img src={logo} className="w-[4.5625rem]" alt="logo" />
+            <img
+              src={logo}
+              className="w-[2.5rem] md:w-[4.5625rem]"
+              alt="logo"
+            />
           </div>
           <div className="flex items-center">
-            <div className="hidden sm:block" onClick={() => navigate("/login")}>
-              <Button name="Member Login" />
-            </div>
+            {!isLoggedIn && (
+              <div
+                className="hidden sm:block"
+                onClick={() => navigate("/login")}
+              >
+                <Button name="Member Login" />
+              </div>
+            )}
             <div
-              className="w-10 h-6 relative ml-3 group cursor-pointer"
+              className="w-8 md:w-10 h-4 md:h-6 relative ml-3 group cursor-pointer"
               onClick={() => openMenu()}
             >
-              <span className="w-1/2 h-[0.25rem] absolute top-0 bg-brand group-hover:w-full duration-500"></span>
-              <span className="w-full h-[0.25rem] absolute top-1/2 bg-brand"></span>
-              <span className="w-1/2 h-[0.25rem] absolute top-full right-0 bg-brand group-hover:w-full duration-500"></span>
+              <span className="w-1/2 h-[0.125rem] md:h-[0.25rem] absolute top-0 bg-brand group-hover:w-full duration-500"></span>
+              <span className="w-full h-[0.125rem] md:h-[0.25rem] absolute top-1/2 bg-brand"></span>
+              <span className="w-1/2 h-[0.125rem] md:h-[0.25rem] absolute top-full right-0 bg-brand group-hover:w-full duration-500"></span>
             </div>
           </div>
         </div>

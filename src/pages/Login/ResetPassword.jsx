@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import { loginFunc } from "../../Services/apiFunctions";
+import { loginFunc, postApiData } from "../../Services/apiFunctions";
 import { useMutation } from "@tanstack/react-query";
 
-const Login = () => {
+const ResetPassword = () => {
   const [loginError, setLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
 
@@ -21,25 +21,23 @@ const Login = () => {
   const onSubmit = (data) => {
     // console.log(data);
     mutate(data);
-    // reset();
+    reset();
   };
 
   // initialize login handler
 
-  const loginHandler = (data) => {
-    return loginFunc("login", data);
+  const postNewPassword = (data) => {
+    return postApiData("profile/set/password", data);
   };
 
-  const { mutate } = useMutation(loginHandler, {
+  const { mutate } = useMutation(postNewPassword, {
     onSuccess: (response) => {
-      // console.log(response);
+      //   console.log(response);
       localStorage.setItem("isLoggedIn", true);
-      localStorage.setItem("access_token", response.data.accessToken);
-      // localStorage.setItem("user", response.data.user);
       navigate("/");
     },
     onError: (err) => {
-      // console.log(err.response.data.message);
+      //   console.log(err.response.data.message);
 
       setLoginError(true);
       setErrorMessage(err.response.data.message);
@@ -56,33 +54,7 @@ const Login = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="flex flex-col items-start w-full">
-          <label htmlFor="mobile">
-            {errors.mobile && errors.mobile.type === "required" ? (
-              <span className="text-subBrand text-xs">
-                (**Phone is required)
-              </span>
-            ) : errors.mobile ? (
-              <span className="text-subBrand text-xs">
-                {`(**${errors.mobile.message})`}
-              </span>
-            ) : (
-              ""
-            )}
-          </label>
-          <input
-            type="tel"
-            name="mobile"
-            id="mobile"
-            placeholder="Mobile Number"
-            className="px-5 py-4 w-full my-2 focus-within:outline-none focus:border focus:border-brand placeholder:font-brand placeholder:text-[#222]"
-            onFocus={() => setErrorMessage(false)}
-            {...register("mobile", {
-              required: true,
-            })}
-          />
-        </div>
-        <div className="flex flex-col items-start w-full">
-          <label htmlFor="email">
+          <label htmlFor="password">
             {errors.password && errors.password.type === "required" && (
               <span className="text-subBrand text-xs">
                 (**Password is required)
@@ -98,18 +70,31 @@ const Login = () => {
             {...register("password", { required: true })}
           />
         </div>
-        <h1
-          className="font-brand text-[#222] px-5 ml-auto my-3 cursor-pointer"
-          onClick={() => navigate("/forgot-password")}
-        >
-          Login with OTP
-        </h1>
+        <div className="flex flex-col items-start w-full">
+          <label htmlFor="confirmPassword">
+            {errors.confirmPassword &&
+              errors.confirmPassword.type === "required" && (
+                <span className="text-subBrand text-xs">
+                  (**Retype Password again)
+                </span>
+              )}
+          </label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            className="px-5 py-4 w-full my-2 focus-within:outline-none focus:border focus:border-brand placeholder:font-brand placeholder:text-[#222]"
+            {...register("confirmPassword", { required: true })}
+          />
+        </div>
+
         <div className="w-full">
           <button
             type="submit"
             className="w-full px-20 py-4 tracking-[3.2px] font-brand text-[#222] uppercase border-2 border-brand my-5 hover:bg-brand hover:text-white transition-all duration-700"
           >
-            Member Login
+            Reset Password
           </button>
         </div>
       </form>
@@ -117,4 +102,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ResetPassword;

@@ -7,9 +7,12 @@ import FeatureDetails from "./pages/FeatureDetails/FeatureDetails";
 import NewsDetails from "./pages/NewsDetails/NewsDetails";
 import Navbar from "./components/Navbar";
 import EventDetails from "./pages/EventDetails/EventDetails";
-import ForgotPassword from "./pages/Login/ForgotPassword";
 import LoginLayout from "./pages/Login/LoginLayout";
 import Notice from "./pages/Notice/Notice";
+import protectedMenuItems from "./router/ProtectedPaths";
+import SubFacilities from "./pages/SubFacilities/SubFacilities";
+
+import Sports from "./pages/Sports/Sports";
 
 function App() {
   const { pathname } = useLocation();
@@ -17,6 +20,8 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
 
   return (
     <>
@@ -44,8 +49,27 @@ function App() {
         <Route path="/event-details" element={<EventDetails />} />
         <Route path="/feature-details" element={<FeatureDetails />} />
         <Route path="/news-details" element={<NewsDetails />} />
+        <Route path="/login" element={<LoginLayout />} />
         <Route path="/forgot-password" element={<LoginLayout />} />
+        <Route path="/submit-otp" element={<LoginLayout />} />
+        <Route path="/reset-password" element={<LoginLayout />} />
         <Route path="/notice" element={<Notice />} />
+        <Route
+          path="/facility-details/:facility-name"
+          element={<FeatureDetails />}
+        />
+        <Route path="/food-beverages/:id" element={<SubFacilities />} />
+        <Route path="/sports/:id" element={<Sports />} />
+        <Route
+          path="/facility-details/:parentId/:childId"
+          element={<FeatureDetails />}
+        />
+
+        {isLoggedIn
+          ? protectedMenuItems.map((item) => (
+              <Route path={item.path} element={item.element} key={item.name} />
+            ))
+          : null}
       </Routes>
 
       <Footer />

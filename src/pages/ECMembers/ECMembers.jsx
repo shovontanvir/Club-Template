@@ -17,7 +17,8 @@ const ECMembers = ({ headline, url }) => {
   if (isLoading) return "Loading Data...";
   if (isError) return error.meassage;
 
-  const members = data;
+  const members = data?.data?.memberPage?.members;
+  console.log(members);
   return (
     <>
       <ClassicHeader headline={headline} bgClass="bg-classic" />

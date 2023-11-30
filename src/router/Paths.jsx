@@ -2,9 +2,12 @@ import AffiliatedClubs from "../pages/AffiliatedClubs/AffiliatedClubs";
 import ClubHistory from "../pages/ClubHistory/ClubHistory";
 import Commitee from "../pages/Commitee/Commitee";
 import Contact from "../pages/Contact/Contact";
+import DescriptionPage from "../pages/DescriptionPage/DescriptionPage";
 
 import ECMembers from "../pages/ECMembers/ECMembers";
 import ElectionLive from "../pages/ElelctionLive/ElectionLive";
+import ElectionBoard from "../pages/ElelctionLive/partials/ElectionBoard";
+import ElectionCandidates from "../pages/ElelctionLive/partials/ElectionCandidates";
 import Event from "../pages/Event/Event";
 import Facilities from "../pages/Facilities/Facilities";
 import FeatureDetails from "../pages/FeatureDetails/FeatureDetails";
@@ -36,36 +39,47 @@ export const menuItems = [
       {
         name: "Founder Members",
         path: "/founder-members",
-        element: <ECMembers headline="Founder Members" url="committee" />,
-      },
-      {
-        name: "Current Presidents Message",
-        path: "/current-president-message",
         element: (
-          <MessageFrom messagePerson="Current President" url="message-from" />
+          <ECMembers
+            headline="Founder Members"
+            url="ec-member-list?page=1&searchKey=&size=10"
+          />
         ),
       },
       {
-        name: "Current Advisors Message",
-        path: "/current-advisor-message",
+        name: "Founder President Message",
+        path: "/founder-president-message",
         element: (
-          <MessageFrom messagePerson="Current Advisor" url="message-from" />
+          <MessageFrom
+            messagePerson="Founder President"
+            url="club/message/get?messageFrom=Founder President Message"
+          />
+        ),
+      },
+      {
+        name: "Founder Advisor Message",
+        path: "/founder-advisor-message",
+        element: (
+          <MessageFrom
+            messagePerson="Founder Advisor"
+            url="club/message/get?messageFrom=Founder Advisor Message"
+          />
         ),
       },
       {
         name: "Guest Rules",
         path: "/guest-rules",
-        // element:
+        element: <DescriptionPage headline="Guest Rules" />,
       },
       {
         name: "Dress Code",
         path: "/dress-code",
-        // element:
+        element: <DescriptionPage headline="Guest Rules" />,
       },
       {
         name: "Timing",
         path: "/timing",
-        // element:
+        element: <DescriptionPage headline="Guest Rules" />,
       },
     ],
   },
@@ -73,20 +87,26 @@ export const menuItems = [
     id: 2,
     name: "Committee",
     path: "/committee",
-    element: <Commitee headline="Present Committee" url="committee" />,
+    element: <Commitee messagePerson="Present Committee" url="committee" />,
     childMenu: [
       {
-        name: "Founder Presidents Message",
-        path: "/founder-president-message",
+        name: "President Message",
+        path: "/current-president-message",
         element: (
-          <MessageFrom messagePerson="Founder President" url="message-from" />
+          <MessageFrom
+            messagePerson="President"
+            url="club/message/get?messageFrom=President Message"
+          />
         ),
       },
       {
         name: "Present Executive Committee",
         path: "/present-ec",
         element: (
-          <ECMembers headline="Present Executive Committee" url="committee" />
+          <ECMembers
+            headline="Present Executive Committee"
+            url="ec-member-list?page=1&searchKey=&size=10"
+          />
         ),
       },
       {
@@ -119,83 +139,12 @@ export const menuItems = [
     name: "Facilities",
     path: "/facilities",
     element: (
-      <Facilities headline="Facilities" bgClass="bg-classic" url="facilities" />
+      <Facilities
+        headline="Facilities"
+        bgClass="bg-classic"
+        url="club/facilities/list"
+      />
     ),
-    childMenu: [
-      {
-        name: "Food & Beverage",
-        path: "/food-beverages",
-        element: (
-          <SubFacilities
-            headline="Food & Beverages"
-            bgClass="bg-fnb"
-            url="food-beverages"
-          />
-        ),
-      },
-      {
-        name: "Halls",
-        path: "/halls",
-        element: (
-          <SubFacilities headline="Halls" bgClass="bg-fnb" url="halls" />
-        ),
-      },
-      {
-        name: "Club Residence",
-        path: "/club-residence",
-        element: (
-          <SubFacilities
-            headline="Club Residence"
-            bgClass="bg-fnb"
-            url="club-residence"
-          />
-        ),
-      },
-      {
-        name: "Health & Fitness",
-        path: "/health-fitness",
-        element: (
-          <SubFacilities
-            headline="Health & Fitness"
-            bgClass="bg-fnb"
-            url="health-fitness"
-          />
-        ),
-      },
-      {
-        name: "Personal Care & Salon",
-        path: "/personal-care",
-        element: (
-          <SubFacilities
-            headline="Personal Care & Salon"
-            bgClass="bg-fnb"
-            url="personal-care"
-          />
-        ),
-      },
-      {
-        name: "Laundry",
-        path: "/laundry",
-        element: <FeatureDetails />,
-      },
-      {
-        name: "Prayer Room",
-        path: "/prayer-room",
-        element: <FeatureDetails />,
-      },
-      {
-        name: "Lobby Lounge",
-        path: "/lobby-lounge",
-        element: <FeatureDetails />,
-      },
-      {
-        name: "Sports",
-        path: "/sports",
-        element: (
-          <SubFacilities headline="Sports" bgClass="bg-fnb" url="sports" />
-        ),
-      },
-    ],
   },
   {
     id: 5,
@@ -224,7 +173,42 @@ export const menuItems = [
     id: 9,
     name: "Election",
     path: "/election",
-    element: <ElectionLive />,
+    childMenu: [
+      {
+        name: "Election Board",
+        path: "/election-board",
+        element: (
+          <ElectionBoard url="election/board/list?boardType=Election Appeal Board" />
+        ),
+      },
+      {
+        name: "Election Appeal Board",
+        path: "/election-appeal-board",
+        element: (
+          <ElectionBoard url="election/board/list?boardType=Election Board" />
+        ),
+      },
+      {
+        name: "President Candidate List",
+        path: "/president-candidate-list",
+        element: (
+          <ElectionCandidates
+            headline="Presidential Candidate"
+            url="election/candidate/list?candidateType=President"
+          />
+        ),
+      },
+      {
+        name: "EC Candidate List",
+        path: "/ec-candidate-list",
+        element: (
+          <ElectionCandidates
+            headline="Executive Committee Candidate"
+            url="election/candidate/list?candidateType=Executive Committee"
+          />
+        ),
+      },
+    ],
   },
   {
     id: 10,
@@ -232,12 +216,12 @@ export const menuItems = [
     path: "/contact",
     element: <Contact />,
   },
-  {
-    id: 11,
-    name: "Login",
-    path: "/login",
-    element: <LoginLayout />,
-  },
+  // {
+  //   id: 11,
+  //   name: "Login",
+  //   path: "/login",
+  //   element: <LoginLayout />,
+  // },
 ];
 
 export default menuItems;

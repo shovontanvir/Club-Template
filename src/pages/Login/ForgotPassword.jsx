@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { postApiData } from "../../Services/apiFunctions";
+import { useMutation } from "@tanstack/react-query";
 
 const ForgotPassword = () => {
+  const [loginError, setLoginError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
+  const [mobile, setMobile] = useState();
   const navigate = useNavigate();
   // initialize react hook form
   const form = useForm();
@@ -12,9 +17,30 @@ const ForgotPassword = () => {
   // submit handler
   const onSubmit = (data) => {
     // console.log(data);
-    mutate(data);
+    setMobile(data.mobile);
+    const finalData = {
+      ...data,
+      hashCode: "#qwerty",
+    };
+    mutate(finalData);
     reset();
   };
+
+  const postMobileNumber = (data) => {
+    return postApiData("login-with-otp", data);
+  };
+
+  const { mutate } = useMutation(postMobileNumber, {
+    onSuccess: (response) => {
+      // console.log(response);
+      localStorage.setItem("mobile", mobile);
+      navigate("/submit-otp");
+    },
+    onError: (err) => {
+      // console.log(err);
+      setMobile();
+    },
+  });
 
   return (
     <>
@@ -23,57 +49,32 @@ const ForgotPassword = () => {
         className="w-full flex flex-col justify-between items-center my-5"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div className="flex flex-wrap items-center justify-between w-full">
-          <div className="w-28 p-2">
-            <input
-              type="number"
-              name="otp1"
-              id="otp1"
-              className=" w-full aspect-video focus-within:outline-none border border-brand text-center"
-              onFocus={() => setErrorMessage(false)}
-              {...register("otp1", {
-                required: true,
-              })}
-            />
-          </div>
-          <div className="w-28 p-2">
-            <input
-              type="number"
-              name="otp1"
-              id="otp1"
-              className=" w-full aspect-video focus-within:outline-none border border-brand text-center"
-              onFocus={() => setErrorMessage(false)}
-              {...register("otp1", {
-                required: true,
-              })}
-            />
-          </div>
-          <div className="w-28 p-2">
-            <input
-              type="number"
-              name="otp1"
-              id="otp1"
-              className=" w-full aspect-video focus-within:outline-none border border-brand text-center"
-              onFocus={() => setErrorMessage(false)}
-              {...register("otp1", {
-                required: true,
-              })}
-            />
-          </div>
-          <div className="w-28 p-2">
-            <input
-              type="number"
-              name="otp1"
-              id="otp1"
-              className=" w-full aspect-video focus-within:outline-none border border-brand text-center"
-              onFocus={() => setErrorMessage(false)}
-              {...register("otp1", {
-                required: true,
-              })}
-            />
-          </div>
+        <div className="flex flex-col items-start w-full px-2">
+          <label htmlFor="mobile">
+            {errors.mobile && errors.mobile.type === "required" ? (
+              <span className="text-subBrand text-xs">
+                (**Phone is required)
+              </span>
+            ) : errors.mobile ? (
+              <span className="text-subBrand text-xs">
+                {`(**${errors.mobile.message})`}
+              </span>
+            ) : (
+              ""
+            )}
+          </label>
+          <input
+            type="tel"
+            name="mobile"
+            id="mobile"
+            placeholder="Mobile Number"
+            className="px-5 py-4 w-full my-2 focus-within:outline-none focus:border focus:border-brand placeholder:font-brand placeholder:text-[#222]"
+            onFocus={() => setErrorMessage(false)}
+            {...register("mobile", {
+              required: true,
+            })}
+          />
         </div>
-
         <div className="w-full p-2 text-center">
           <button
             type="submit"

@@ -5,7 +5,7 @@ const SubFacilitiesItem = ({ image, name, children }) => {
     <div>
       <div className="overflow-hidden relative">
         <img
-          alt="member"
+          alt={name}
           className="group-hover:scale-110 transition duration-500 absolute inset-0 w-full h-full ease-in-out"
           src={image}
         />

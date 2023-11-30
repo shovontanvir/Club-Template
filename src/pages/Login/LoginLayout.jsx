@@ -4,6 +4,8 @@ import ClassicHeader from "../../components/ClassicHeader";
 import { useLocation } from "react-router-dom";
 import Login from "./Login";
 import ForgotPassword from "./ForgotPassword";
+import SubmitOtp from "./SubmitOtp";
+import ResetPassword from "./ResetPassword";
 
 const LoginLayout = ({ children, heading }) => {
   const path = useLocation().pathname;
@@ -27,10 +29,26 @@ const LoginLayout = ({ children, heading }) => {
                   : "text-lg text-start"
               }`}
             >
-              {path === "/login" ? "Login" : "Enter OTP"}
+              {path === "/login"
+                ? "Member Login"
+                : path === "/forgot-password"
+                ? "Forgot Password"
+                : path === "/submit-otp"
+                ? "Submit OTP"
+                : path === "reset-password"
+                ? "Reset Password"
+                : null}
             </h1>
             <div className="w-full">
-              {path === "/login" ? <Login /> : <ForgotPassword />}
+              {path === "/login" ? (
+                <Login />
+              ) : path === "/forgot-password" ? (
+                <ForgotPassword />
+              ) : path === "/submit-otp" ? (
+                <SubmitOtp />
+              ) : path === "/reset-password" ? (
+                <ResetPassword />
+              ) : null}
             </div>
           </div>
         </div>

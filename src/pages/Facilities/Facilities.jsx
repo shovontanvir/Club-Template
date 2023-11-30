@@ -18,7 +18,21 @@ const Facilities = ({ url }) => {
   if (isError) return error.message;
 
   //   console.log(data);
-  const facilities = data;
+  const facilities = data.data.facilities;
+  const mediaPath = data.data.mediaPath;
+
+  const navigationHandler = (type, id, childId) => {
+    switch (type) {
+      case "Restaurant":
+        return `/food-beverages/${id}`;
+      case "Sports":
+        return `/sports/${id}`;
+      case "Booking":
+        return "/booking";
+      default:
+        return `/facility-details/${id}/${childId}`;
+    }
+  };
 
   return (
     <>
@@ -28,9 +42,15 @@ const Facilities = ({ url }) => {
           <div className="basis-1/3 p-3 aspect-square" key={item.name}>
             <FacilitiesItem
               name={item.name}
-              title={item.title}
-              image={item.image}
-              // navigateTo={item.navigate}
+              // title={item.title}
+              image={mediaPath + item.coverImage}
+              navigateTo={
+                !item.type === "Others"
+                  ? navigationHandler(item.type, item._id)
+                  : item.type === "Others" && item.items.length === 0
+                  ? null
+                  : navigationHandler(item.type, item._id, item.items[0]?._id)
+              }
             />
           </div>
         ))}
